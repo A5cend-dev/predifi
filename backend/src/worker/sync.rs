@@ -110,8 +110,6 @@ pub async fn run_full_sync(
         .fetch_all(db)
         .await?;
 
-    let rows: Vec<_> = rows; // Help compiler infer the type
-
     let mut results = Vec::with_capacity(rows.len());
     let mut fixed_count = 0u32;
     let mut error_count = 0u32;
